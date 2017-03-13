@@ -224,7 +224,6 @@ public class CircleProgressbar extends TextView
 
     /**
      * 拿到进度条类型。
-     *
      * @return
      */
     public ProgressType getProgressType() {
@@ -233,7 +232,6 @@ public class CircleProgressbar extends TextView
 
     /**
      * 设置进度监听。
-     *
      * @param mCountdownProgressListener 监听器。
      */
     public void setCountdownProgressListener(int what, OnCountdownProgressListener mCountdownProgressListener) {
@@ -244,7 +242,8 @@ public class CircleProgressbar extends TextView
     /**
      * 开始。
      */
-    public void start() {
+    public void start()
+    {
         stop();
         post(progressChangeTask);
     }
@@ -252,7 +251,8 @@ public class CircleProgressbar extends TextView
     /**
      * 重新开始。
      */
-    public void reStart() {
+    public void reStart()
+    {
         resetProgress();
         start();
     }
@@ -362,8 +362,8 @@ public class CircleProgressbar extends TextView
     /**
      * 进度监听。
      */
-    public interface OnCountdownProgressListener {
-
+    public interface OnCountdownProgressListener
+    {
         void onProgress(int what, int progress);
     }
 }
