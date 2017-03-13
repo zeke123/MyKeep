@@ -17,8 +17,8 @@ import android.widget.TextView;
 import com.zhoujian.mykeep.R;
 
 
-public class CircleProgressbar extends TextView {
-
+public class CircleProgressbar extends TextView
+{
 
     //外部轮廓的颜色
     private int outLineColor = Color.BLACK;
@@ -81,7 +81,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 初始化。
-     *
      * @param context      上下文。
      * @param attributeSet 属性。
      */
@@ -98,7 +97,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置外部轮廓的颜色。
-     *
      * @param outLineColor 颜色值。
      */
     public void setOutLineColor(@ColorInt int outLineColor) {
@@ -108,7 +106,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置外部轮廓的颜色。
-     *
      * @param outLineWidth 颜色值。
      */
     public void setOutLineWidth(@ColorInt int outLineWidth) {
@@ -118,7 +115,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置圆形的填充颜色。
-     *
      * @param inCircleColor 颜色值。
      */
     public void setInCircleColor(@ColorInt int inCircleColor) {
@@ -139,7 +135,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置进度条颜色。
-     *
      * @param progressLineColor 颜色值。
      */
     public void setProgressColor(@ColorInt int progressLineColor) {
@@ -149,7 +144,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置进度条线的宽度。
-     *
      * @param progressLineWidth 宽度值。
      */
     public void setProgressLineWidth(int progressLineWidth) {
@@ -159,7 +153,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置进度。
-     *
      * @param progress 进度。
      */
     public void setProgress(int progress) {
@@ -169,7 +162,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 验证进度。
-     *
      * @param progress 你要验证的进度值。
      * @return 返回真正的进度值。
      */
@@ -183,7 +175,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 拿到此时的进度。
-     *
      * @return 进度值，最大100，最小0。
      */
     public int getProgress() {
@@ -192,7 +183,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置倒计时总时间。
-     *
      * @param timeMillis 毫秒。
      */
     public void setTimeMillis(long timeMillis) {
@@ -202,7 +192,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 拿到进度条计时时间。
-     *
      * @return 毫秒。
      */
     public long getTimeMillis() {
@@ -211,7 +200,6 @@ public class CircleProgressbar extends TextView {
 
     /**
      * 设置进度条类型。
-     *
      * @param progressType {@link ProgressType}.
      */
     public void setProgressType(ProgressType progressType) {
