@@ -16,7 +16,6 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 import com.zhoujian.mykeep.R;
 
-
 public class CircleProgressbar extends TextView
 {
 
@@ -211,8 +210,10 @@ public class CircleProgressbar extends TextView
     /**
      * 重置进度。
      */
-    private void resetProgress() {
-        switch (mProgressType) {
+    private void resetProgress()
+    {
+        switch (mProgressType)
+        {
             case COUNT:
                 progress = 0;
                 break;
