@@ -78,11 +78,7 @@ public class CircleProgressbar extends TextView
         initialize(context, attrs);
     }
 
-    /**
-     * 初始化。
-     * @param context      上下文。
-     * @param attributeSet 属性。
-     */
+
     private void initialize(Context context, AttributeSet attributeSet) {
         mPaint.setAntiAlias(true);
         TypedArray typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.CircleProgressbar);
@@ -94,36 +90,25 @@ public class CircleProgressbar extends TextView
         typedArray.recycle();
     }
 
-    /**
-     * 设置外部轮廓的颜色。
-     * @param outLineColor 颜色值。
-     */
+
     public void setOutLineColor(@ColorInt int outLineColor) {
         this.outLineColor = outLineColor;
         invalidate();
     }
 
-    /**
-     * 设置外部轮廓的颜色。
-     * @param outLineWidth 颜色值。
-     */
+
     public void setOutLineWidth(@ColorInt int outLineWidth) {
         this.outLineWidth = outLineWidth;
         invalidate();
     }
 
-    /**
-     * 设置圆形的填充颜色。
-     * @param inCircleColor 颜色值。
-     */
+
     public void setInCircleColor(@ColorInt int inCircleColor) {
         this.inCircleColors = ColorStateList.valueOf(inCircleColor);
         invalidate();
     }
 
-    /**
-     * 是否需要更新圆的颜色。
-     */
+
     private void validateCircleColor() {
         int circleColorTemp = inCircleColors.getColorForState(getDrawableState(), Color.TRANSPARENT);
         if (circleColor != circleColorTemp) {
@@ -132,38 +117,25 @@ public class CircleProgressbar extends TextView
         }
     }
 
-    /**
-     * 设置进度条颜色。
-     * @param progressLineColor 颜色值。
-     */
+
     public void setProgressColor(@ColorInt int progressLineColor) {
         this.progressLineColor = progressLineColor;
         invalidate();
     }
 
-    /**
-     * 设置进度条线的宽度。
-     * @param progressLineWidth 宽度值。
-     */
+
     public void setProgressLineWidth(int progressLineWidth) {
         this.progressLineWidth = progressLineWidth;
         invalidate();
     }
 
-    /**
-     * 设置进度。
-     * @param progress 进度。
-     */
+
     public void setProgress(int progress) {
         this.progress = validateProgress(progress);
         invalidate();
     }
 
-    /**
-     * 验证进度。
-     * @param progress 你要验证的进度值。
-     * @return 返回真正的进度值。
-     */
+
     private int validateProgress(int progress) {
         if (progress > 100)
             progress = 100;
@@ -172,44 +144,30 @@ public class CircleProgressbar extends TextView
         return progress;
     }
 
-    /**
-     * 拿到此时的进度。
-     * @return 进度值，最大100，最小0。
-     */
+
     public int getProgress() {
         return progress;
     }
 
-    /**
-     * 设置倒计时总时间。
-     * @param timeMillis 毫秒。
-     */
+
     public void setTimeMillis(long timeMillis) {
         this.timeMillis = timeMillis;
         invalidate();
     }
 
-    /**
-     * 拿到进度条计时时间。
-     * @return 毫秒。
-     */
+
     public long getTimeMillis() {
         return this.timeMillis;
     }
 
-    /**
-     * 设置进度条类型。
-     * @param progressType {@link ProgressType}.
-     */
+
     public void setProgressType(ProgressType progressType) {
         this.mProgressType = progressType;
         resetProgress();
         invalidate();
     }
 
-    /**
-     * 重置进度。
-     */
+
     private void resetProgress()
     {
         switch (mProgressType)
@@ -223,44 +181,31 @@ public class CircleProgressbar extends TextView
         }
     }
 
-    /**
-     * 拿到进度条类型。
-     * @return
-     */
     public ProgressType getProgressType() {
         return mProgressType;
     }
 
-    /**
-     * 设置进度监听。
-     * @param mCountdownProgressListener 监听器。
-     */
+
     public void setCountdownProgressListener(int what, OnCountdownProgressListener mCountdownProgressListener) {
         this.listenerWhat = what;
         this.mCountdownProgressListener = mCountdownProgressListener;
     }
 
-    /**
-     * 开始。
-     */
+
     public void start()
     {
         stop();
         post(progressChangeTask);
     }
 
-    /**
-     * 重新开始。
-     */
+
     public void reStart()
     {
         resetProgress();
         start();
     }
 
-    /**
-     * 停止。
-     */
+
     public void stop() {
         removeCallbacks(progressChangeTask);
     }
@@ -320,9 +265,7 @@ public class CircleProgressbar extends TextView
         validateCircleColor();
     }
 
-    /**
-     * 进度更新task。
-     */
+
     private Runnable progressChangeTask = new Runnable() {
         @Override
         public void run() {
@@ -345,9 +288,7 @@ public class CircleProgressbar extends TextView
         }
     };
 
-    /**
-     * 进度条类型。
-     */
+
     public enum ProgressType {
         /**
          * 顺数进度条，从0-100；
@@ -360,9 +301,6 @@ public class CircleProgressbar extends TextView
         COUNT_BACK;
     }
 
-    /**
-     * 进度监听。
-     */
     public interface OnCountdownProgressListener
     {
         void onProgress(int what, int progress);

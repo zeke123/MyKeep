@@ -12,7 +12,6 @@ import com.zhoujian.mykeep.view.CircleProgressbar;
 public class SplashActivity extends AppCompatActivity
 {
 
-
     private static final String TAG ="SplashActivity";
 
     private CircleProgressbar mCircleProgressbar;
@@ -23,7 +22,6 @@ public class SplashActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
 
         mCircleProgressbar = (CircleProgressbar) findViewById(R.id.tv_red_skip);
         mCircleProgressbar.setOutLineColor(Color.TRANSPARENT);
