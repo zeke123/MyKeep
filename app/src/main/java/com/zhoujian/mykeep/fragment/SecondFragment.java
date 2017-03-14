@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 import com.zhoujian.mykeep.R;
 
 
-public class SecondFragment extends Fragment {
+public class SecondFragment extends Fragment
+{
 
      public static Fragment newInstance(){
          SecondFragment fragment = new SecondFragment();
@@ -20,8 +21,15 @@ public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.second_fragment_layout,null);
+
+
+
+
         return view;
     }
+
+
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
