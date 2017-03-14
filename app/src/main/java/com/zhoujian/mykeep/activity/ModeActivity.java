@@ -33,9 +33,9 @@ public class ModeActivity extends AppCompatActivity
 
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_mode);
         initData();
         initView();
@@ -43,8 +43,6 @@ public class ModeActivity extends AppCompatActivity
 
     private void initData()
     {
-
-
         personList = new ArrayList<Person>();
         Person mPerson0= new Person("林黛玉");
         personList.add(mPerson0);
