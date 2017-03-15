@@ -9,6 +9,18 @@
         android:layout_height="wrap_content"
         android:text="训练"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:text="跳转界面"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+
+
+
 </LinearLayout>

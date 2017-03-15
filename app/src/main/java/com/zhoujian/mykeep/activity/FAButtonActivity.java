@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
@@ -14,17 +15,19 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
 import com.zhoujian.mykeep.R;
 import com.zhoujian.mykeep.adapter.MainAdapter;
 import com.zhoujian.mykeep.bean.Person;
+
 import java.util.ArrayList;
 
 /**
- * Created by zhoujian on 2017/3/14.
+ * Created by zhoujian on 2017/3/15.
  */
 
-public class ModeActivity extends AppCompatActivity
-{
+public class FAButtonActivity extends AppCompatActivity {
+
 
     public static final String TAG = "ModeActivity";
     private RecyclerView mRecyclerView;
@@ -33,13 +36,14 @@ public class ModeActivity extends AppCompatActivity
 
 
     @Override
-    protected void onCreate( Bundle savedInstanceState)
-    {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mode);
+
+        setContentView(R.layout.layout_fab_button);
         initData();
         initView();
     }
+
 
     private void initData()
     {
@@ -87,7 +91,7 @@ public class ModeActivity extends AppCompatActivity
                 switch (item.getItemId()){
                     case R.id.item_search:
                         //点击设置
-                        Toast.makeText(ModeActivity.this, "按钮被点击了", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(FAButtonActivity.this, "按钮被点击了", Toast.LENGTH_SHORT).show();
                         break;
 
                 }
@@ -120,13 +124,34 @@ public class ModeActivity extends AppCompatActivity
         });
 
 
+
+
+        FloatingActionButton fab= (FloatingActionButton)findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(FAButtonActivity.this, "FloatingActionButton被点击了", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
         mRecyclerView =(RecyclerView) findViewById(R.id.id_recyclerview);
-        adapter = new MainAdapter(ModeActivity.this, personList);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(ModeActivity.this));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(ModeActivity.this,DividerItemDecoration.VERTICAL));
+        adapter = new MainAdapter(FAButtonActivity.this, personList);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(FAButtonActivity.this));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(FAButtonActivity.this,DividerItemDecoration.VERTICAL));
         // 设置item动画
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(adapter);
 
     }
+
+
+
+
+
+
 }

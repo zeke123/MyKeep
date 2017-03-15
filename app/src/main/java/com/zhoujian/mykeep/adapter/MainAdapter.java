@@ -9,10 +9,8 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.zhoujian.mykeep.R;
 import com.zhoujian.mykeep.bean.Person;
-
 import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>
