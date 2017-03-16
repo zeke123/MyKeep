@@ -31,7 +31,6 @@ public class ModeActivity extends AppCompatActivity
     private ArrayList<Person> personList;
     private MainAdapter adapter;
 
-
     @Override
     protected void onCreate( Bundle savedInstanceState)
     {
@@ -89,12 +88,10 @@ public class ModeActivity extends AppCompatActivity
                         //点击设置
                         Toast.makeText(ModeActivity.this, "按钮被点击了", Toast.LENGTH_SHORT).show();
                         break;
-
                 }
                 return false;
             }
         });
-
 
 
         AppBarLayout app_bar_layout = (AppBarLayout)findViewById(R.id.app_bar_layout);
