@@ -4,6 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
+        resConfigs "zh"
         applicationId "com.zhoujian.mykeep"
         minSdkVersion 11
         targetSdkVersion 25
@@ -13,7 +14,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

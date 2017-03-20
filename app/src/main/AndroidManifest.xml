@@ -38,6 +38,11 @@
             android:name=".activity.FAButtonActivity"
             android:theme="@style/MyTheme"/>
 
+        <activity
+            android:name=".activity.TitleActivity"
+            android:theme="@style/MyTheme"/>
+
+
 
 
     </application>

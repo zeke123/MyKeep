@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        //setTheme(R.style.MyTheme);
+
         setContentView(R.layout.activity_main);
         initView();
     }

@@ -47,6 +47,13 @@ public class SplashActivity extends AppCompatActivity
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        isClick = true;
+
+    }
+
     private CircleProgressbar.OnCountdownProgressListener progressListener = new CircleProgressbar.OnCountdownProgressListener() {
         @Override
         public void onProgress(int what, int progress)

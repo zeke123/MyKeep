@@ -11,6 +11,14 @@
         <item name="android:listDivider">@drawable/divider_bg</item>
     </style>
 
+<!--
+
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        &lt;!&ndash;关闭启动窗口&ndash;&gt;
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+-->
+
 
 
     <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
