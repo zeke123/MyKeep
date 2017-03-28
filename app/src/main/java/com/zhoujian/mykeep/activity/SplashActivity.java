@@ -13,9 +13,7 @@ public class SplashActivity extends AppCompatActivity
 {
 
     private static final String TAG ="SplashActivity";
-
     private CircleProgressbar mCircleProgressbar;
-
     private boolean isClick = false;
 
     @Override

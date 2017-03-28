@@ -116,7 +116,6 @@ public class ModeActivity extends AppCompatActivity
             }
         });
 
-
         mRecyclerView =(RecyclerView) findViewById(R.id.id_recyclerview);
         adapter = new MainAdapter(ModeActivity.this, personList);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(ModeActivity.this));
