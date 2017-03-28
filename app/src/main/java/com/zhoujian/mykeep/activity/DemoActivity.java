@@ -39,7 +39,7 @@ public class DemoActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
-
+//https://github.com/zeke123/MyKeep.git
         if(mPerson == null){
             mPerson = new Person();
         }
