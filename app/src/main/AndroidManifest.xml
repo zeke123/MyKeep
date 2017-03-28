@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".activity.SplashActivity"
+                  android:configChanges="orientation|keyboardHidden|screenLayout|screenSize">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

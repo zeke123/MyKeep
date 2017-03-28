@@ -64,8 +64,6 @@ public class DemoActivity extends AppCompatActivity
     }
 
 
-
-
     static class MyRunnable implements Runnable{
         @Override
         public void run() {
