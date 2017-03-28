@@ -34,7 +34,6 @@ public class DemoActivity extends AppCompatActivity
 
     public  static Person mPerson;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
